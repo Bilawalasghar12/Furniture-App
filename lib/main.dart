@@ -1,14 +1,14 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Roboto'),
-      home: HomePage(),
+      home: const HomePage(),
     ));
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -17,13 +17,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(244, 243, 243, 1),
+      backgroundColor: const Color.fromRGBO(244, 243, 243, 1),
       appBar: AppBar(
         backgroundColor: Colors.white,
         brightness: Brightness.light,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.menu,
             color: Colors.black87,
           ),
@@ -31,13 +31,13 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.shopping_cart,
               color: Colors.black87,
             ),
             onPressed: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => BlankPage()));
+                  .push(MaterialPageRoute(builder: (_) => const BlankPage()));
             },
           ),
         ],
@@ -180,7 +180,7 @@ class _HomePageState extends State<HomePage> {
       onTap: () {
         debugPrint('dsadadas');
         Navigator.push(
-            context, MaterialPageRoute(builder: (_) => ProductScreen()));
+            context, MaterialPageRoute(builder: (_) => const ProductScreen()));
       },
       child: AspectRatio(
         aspectRatio: 2.62 / 3,
@@ -233,11 +233,11 @@ class _ProductScreenState extends State<ProductScreen> {
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   height: 500,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
                       ),
@@ -251,14 +251,14 @@ class _ProductScreenState extends State<ProductScreen> {
                                   'photo-1564564244660-5d73c057f2d2.jpg',
                                   width: 80,
                                   height: 100)),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                             width: 10,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 'Joshua',
                                 style: TextStyle(
@@ -281,37 +281,37 @@ class _ProductScreenState extends State<ProductScreen> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                         width: 10,
                       ),
                       Row(
                         children: [
                           Row(
-                            children: [Icon(Icons.bookmark), Text('123')],
+                            children: const [Icon(Icons.bookmark), Text('123')],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 25,
                           ),
-                          Icon(Icons.face),
-                          Text('863'),
-                          SizedBox(
+                          const Icon(Icons.face),
+                          const Text('863'),
+                          const SizedBox(
                             width: 25,
                           ),
-                          Icon(Icons.linked_camera_outlined),
-                          Text('117'),
-                          SizedBox(
+                          const Icon(Icons.linked_camera_outlined),
+                          const Text('117'),
+                          const SizedBox(
                             width: 225,
                           ),
-                          Icon(Icons.ac_unit_outlined),
-                          Text('609'),
+                          const Icon(Icons.ac_unit_outlined),
+                          const Text('609'),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBox(
                             height: 10,
                           ),
@@ -326,10 +326,10 @@ class _ProductScreenState extends State<ProductScreen> {
                           ))
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      Flexible(
+                      const Flexible(
                           child: Text(
                         'Once i was drawing a perfect chair for myself but could not finish her design so i bought her',
                         style: TextStyle(
@@ -337,7 +337,7 @@ class _ProductScreenState extends State<ProductScreen> {
                             fontWeight: FontWeight.normal,
                             color: Colors.grey),
                       )),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                         height: 20,
                       ),
@@ -345,7 +345,7 @@ class _ProductScreenState extends State<ProductScreen> {
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30.0),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 width: 0,
                                 style: BorderStyle.none,
                               ),
@@ -406,12 +406,12 @@ class BlankPage extends StatelessWidget {
           children: [
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                   width: 10,
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 30, left: 20),
+                  padding: const EdgeInsets.only(top: 30, left: 20),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(50),
                     child: Image.asset(
@@ -422,16 +422,16 @@ class BlankPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                   width: 10,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 30),
+                  padding: const EdgeInsets.only(top: 30),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Joshua',
                         style: TextStyle(
@@ -455,7 +455,7 @@ class BlankPage extends StatelessWidget {
             ),
             Card(
               child: Container(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -464,7 +464,7 @@ class BlankPage extends StatelessWidget {
                       height: 130,
                       width: 150,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 27,
                       width: 27,
                     ),
@@ -474,7 +474,7 @@ class BlankPage extends StatelessWidget {
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               Text(
                                 'Imported 1',
                                 style: TextStyle(
@@ -483,23 +483,23 @@ class BlankPage extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(right: 40),
+                                padding: EdgeInsets.only(right: 40),
                                 child: Icon(Icons.add_a_photo_sharp),
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                             width: 10,
                           ),
-                          Text('RS 15,000'),
-                          SizedBox(
+                          const Text('RS 15,000'),
+                          const SizedBox(
                             height: 15,
                             width: 15,
                           ),
-                          Text(
+                          const Text(
                             '\$32',
-                            style: TextStyle(color: Colors.grey),
+                            style:  TextStyle(color: Colors.grey),
                           )
                         ],
                       ),
@@ -521,7 +521,7 @@ class BlankPage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 27,
                     width: 27,
                   ),
@@ -531,7 +531,7 @@ class BlankPage extends StatelessWidget {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               'Imported 2',
                               style: TextStyle(
@@ -540,21 +540,21 @@ class BlankPage extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(right: 40),
+                              padding: EdgeInsets.only(right: 40),
                               child: Icon(Icons.add_a_photo_sharp),
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                           width: 10,
                         ),
-                        Text('RS 19,000'),
-                        SizedBox(
+                        const Text('RS 19,000'),
+                        const SizedBox(
                           height: 15,
                           width: 15,
                         ),
-                        Text(
+                        const Text(
                           '\$31a',
                           style: TextStyle(color: Colors.grey),
                         )
@@ -573,7 +573,7 @@ class BlankPage extends StatelessWidget {
                     height: 130,
                     width: 150,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 27,
                     width: 27,
                   ),
@@ -583,7 +583,7 @@ class BlankPage extends StatelessWidget {
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                          children: const [
                             Text(
                               'Imported 3',
                               style: TextStyle(
@@ -592,21 +592,21 @@ class BlankPage extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(right: 40),
+                              padding: EdgeInsets.only(right: 40),
                               child: Icon(Icons.add_a_photo_sharp),
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                           width: 10,
                         ),
-                        Text('RS 15,000'),
-                        SizedBox(
+                        const Text('RS 15,000'),
+                        const SizedBox(
                           height: 15,
                           width: 15,
                         ),
-                        Text(
+                        const Text(
                           '\$32',
                           style: TextStyle(color: Colors.grey),
                         )
@@ -770,7 +770,7 @@ class BlankPage extends StatelessWidget {
               child: ElevatedButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
-                      Color(0xFFa2a3ff),
+                      const Color(0xFFa2a3ff),
                     ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
@@ -782,21 +782,21 @@ class BlankPage extends StatelessWidget {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                    Text('Total'),
-                    Text(
-                      "\$576",
-                      textAlign: TextAlign.left,
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "CONFIRM",
-                          textAlign: TextAlign.right,
+                        const Text('Total'),
+                        const Text(
+                          "\$576",
+                          textAlign: TextAlign.left,
                         ),
-                        Icon(Icons.arrow_forward_ios)
-                      ],
-                    ),
-                  ]),
+                        Row(
+                          children: const [
+                            Text(
+                              "CONFIRM",
+                              textAlign: TextAlign.right,
+                            ),
+                            Icon(Icons.arrow_forward_ios)
+                          ],
+                        ),
+                      ]),
                 ),
               ),
             ),
